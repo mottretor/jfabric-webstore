@@ -8,14 +8,16 @@
     "react-scripts": "1.1.4"
   },
   "scripts": {
-    "pretest": "eslint --ignore-path .gitignore .",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "esw webpack.config.* src tools --color",
+    "lint:watch": "npm run lint -- --watch"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
-    "eslint-config-strongloop": "^2.1.0"
+    "eslint-plugin-react": "^7.7.0",
+    "eslint-watch": "^3.1.4"
   }
 }
