@@ -20,7 +20,7 @@ class App extends Component {
         this.removeLineItemInCart = this.removeLineItemInCart.bind(this);
     }
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         this.props.client.checkout.create().then((res) => {
             this.setState({
                 checkout: res,
